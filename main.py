@@ -83,7 +83,8 @@ def main(dir: str):
 
 
 if __name__ == "__main__":
-    arg = sys.argv[1]
-    if arg == "":
+    if len(sys.argv) < 2:
         print("Please specify a directory.")
+        sys.exit(1)
+    arg = sys.argv[1]
     main(arg)
